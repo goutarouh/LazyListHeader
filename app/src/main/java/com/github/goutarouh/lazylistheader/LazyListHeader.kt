@@ -20,8 +20,6 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 
-val headerHeightDp = 42.dp
-
 @Composable
 fun LazyListHeader() {
     val lazyState = rememberLazyListState()

@@ -33,7 +33,7 @@ fun LazyListScope.headerItem(scrollAmount: Int) {
 
 fun LazyListScope.lazyItems() {
 
-    items(10) {
+    items(30) {
         Item("$it")
     }
 
@@ -49,7 +49,7 @@ private fun Item(
             .fillMaxWidth()
             .padding(12.dp)
             .border(width = 1.dp, shape = RoundedCornerShape(12.dp), color = Color.Gray)
-            .padding(vertical = 128.dp),
+            .padding(vertical = 48.dp),
         horizontalArrangement = Arrangement.Center
     ) {
         Text(text = "item: $item")

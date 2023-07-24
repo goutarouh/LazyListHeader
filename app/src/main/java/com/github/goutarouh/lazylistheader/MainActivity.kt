@@ -7,7 +7,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.github.goutarouh.lazylistheader.scrollable.ScrollableHeaderSample
 import com.github.goutarouh.lazylistheader.ui.theme.LazyListHeaderTheme
+
+val headerHeightDp = 42.dp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +23,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LazyListHeader()
+                    ScrollableHeaderSample()
+                    //LazyListHeader()
                 }
             }
         }
