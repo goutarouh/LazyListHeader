@@ -8,7 +8,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.github.goutarouh.lazylistheader.scrollable.ComposeCoordinateLayoutSample1
 import com.github.goutarouh.lazylistheader.ui.theme.LazyListHeaderTheme
 
 val headerHeightDp = 56.dp
@@ -23,7 +22,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    // Modifier Scrollable を使用する方法
                     ComposeCoordinateLayoutSample1()
+
+                    // LazyListState から計算する方法
                     //ComposeCoordinateLayoutSample2()
                 }
             }
