@@ -16,27 +16,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 
-
-fun LazyListScope.headerItem(scrollAmount: Int) {
-    item {
-        Row(
-            Modifier
-                .height(headerHeightDp)
-                .fillMaxWidth()
-                .border(width = 1.dp, shape = RoundedCornerShape(12.dp), color = Color.Gray)
-            , horizontalArrangement = Arrangement.Center
-            , verticalAlignment = Alignment.CenterVertically
-        ) {}
-    }
-}
-
-
-fun LazyListScope.lazyItems() {
+fun LazyListScope.randomLazyItems() {
 
     items(30) {
-        Item("$it")
+        Item(
+            "$it",
+            modifier = Modifier.padding(vertical = 8.dp).height(if (it % 2 == 0) 120.dp else 80.dp)
+        )
     }
-
 }
 
 @Composable
@@ -45,12 +32,11 @@ private fun Item(
     modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .padding(12.dp)
-            .border(width = 1.dp, shape = RoundedCornerShape(12.dp), color = Color.Gray)
-            .padding(vertical = 48.dp),
-        horizontalArrangement = Arrangement.Center
+            .border(width = 1.dp, shape = RoundedCornerShape(12.dp), color = Color.Gray),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(text = "item: $item")
     }

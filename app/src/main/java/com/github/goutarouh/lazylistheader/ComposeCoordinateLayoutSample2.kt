@@ -20,7 +20,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntOffset
 
 @Composable
-fun LazyListHeader() {
+fun ComposeCoordinateLayoutSample2() {
     val lazyState = rememberLazyListState()
     val density = LocalDensity.current
     val headerHeightPx = with(density) { headerHeightDp.toPx() }
@@ -32,7 +32,7 @@ fun LazyListHeader() {
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(top = headerHeightDp)
         ) {
-            lazyItems()
+            randomLazyItems()
         }
         Row(
             Modifier

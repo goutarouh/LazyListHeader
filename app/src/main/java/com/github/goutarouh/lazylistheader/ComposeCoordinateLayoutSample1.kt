@@ -1,4 +1,4 @@
-package com.github.goutarouh.lazylistheader.scrollable
+package com.github.goutarouh.lazylistheader
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.Orientation
@@ -27,12 +27,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntOffset
-import com.github.goutarouh.lazylistheader.headerHeightDp
-import com.github.goutarouh.lazylistheader.lazyItems
 import kotlinx.coroutines.launch
 
 @Composable
-fun ComposeCoordinateLayoutSample() {
+fun ComposeCoordinateLayoutSample1() {
     val lazyState = rememberLazyListState()
     val scope = rememberCoroutineScope()
     var headerPositionPx by remember { mutableStateOf(0) }
@@ -56,7 +54,7 @@ fun ComposeCoordinateLayoutSample() {
             state = lazyState,
             userScrollEnabled = false
         ) {
-            lazyItems()
+            randomLazyItems()
         }
         Row(
             Modifier
