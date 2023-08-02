@@ -27,7 +27,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntOffset
-import androidx.compose.ui.unit.dp
 import com.github.goutarouh.lazylistheader.headerHeightDp
 import com.github.goutarouh.lazylistheader.lazyItems
 import kotlinx.coroutines.launch
@@ -36,10 +35,9 @@ import kotlinx.coroutines.launch
 fun ComposeCoordinateLayoutSample() {
     val lazyState = rememberLazyListState()
     val scope = rememberCoroutineScope()
-    val headerHeight = 56.dp
     var headerPositionPx by remember { mutableStateOf(0) }
     val density = LocalDensity.current
-    val headerHeightPx = with(density) { headerHeight.toPx() }.toInt()
+    val headerHeightPx = with(density) { headerHeightDp.toPx() }.toInt()
     val scrollableState = rememberScrollableState(consumeScrollDelta = {
         scope.launch { lazyState.scrollBy(-it) }
         headerPositionPx = (headerPositionPx + it.toInt()).coerceIn(-headerHeightPx, 0)

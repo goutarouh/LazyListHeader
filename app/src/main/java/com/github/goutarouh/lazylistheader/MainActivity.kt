@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.dp
 import com.github.goutarouh.lazylistheader.scrollable.ComposeCoordinateLayoutSample
 import com.github.goutarouh.lazylistheader.ui.theme.LazyListHeaderTheme
 
-val headerHeightDp = 42.dp
+val headerHeightDp = 56.dp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
